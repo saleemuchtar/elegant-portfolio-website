@@ -1,14 +1,17 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 
+import App from "./App"
 import "./index.css"
-import App from "./App.tsx"
-import { ThemeProvider } from "@/components/theme-provider.tsx"
 
-createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root")
+
+if (!rootElement) {
+  throw new Error("Elemen root tidak ditemukan.")
+}
+
+createRoot(rootElement).render(
   <StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <App />
   </StrictMode>
 )

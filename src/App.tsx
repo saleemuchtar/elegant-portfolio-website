@@ -1,20 +1,21 @@
-import { Button } from "@/components/ui/button"
+import { LanguageProvider } from "@/lib/language"
+import AboutPage from "@/pages/about"
+import ContactPage from "@/pages/contact"
+import ExperiencePage from "@/pages/experience"
+import HomePage from "@/pages/home"
+import ProjectsPage from "@/pages/projects"
 
-export function App() {
+function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <LanguageProvider>
+      <main className="overflow-x-hidden bg-black">
+        <HomePage />
+        <AboutPage />
+        <ProjectsPage />
+        <ExperiencePage />
+        <ContactPage />
+      </main>
+    </LanguageProvider>
   )
 }
 
