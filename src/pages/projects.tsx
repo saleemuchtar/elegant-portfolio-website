@@ -1,6 +1,7 @@
 import { useState } from "react"
 import {
   ArrowUpRight,
+  BarChart3,
   ChevronDown,
   Globe2,
   Lightbulb,
@@ -126,6 +127,43 @@ const projectCopy = {
           },
         ],
       },
+      {
+        number: "03",
+        category:
+          "Data Analysis • Business Intelligence • Sales Analytics • Dashboard Development",
+        title: "Retail Sales Analysis Dashboard",
+        githubUrl: "https://github.com/saleemuchtar/FreshMart-Retail-Sales-Analysis",
+        description:
+          "Retail Sales Analysis Dashboard membantu mengubah data transaksi menjadi insight bisnis yang mudah dipahami sehingga perusahaan dapat memonitor performa penjualan, profit, pelanggan, dan strategi diskon untuk mendukung keputusan yang lebih cepat dan tepat.",
+        businessNeed:
+          "Perusahaan membutuhkan informasi yang cepat, akurat, dan mudah dipahami untuk mengetahui apa yang menghasilkan keuntungan, apa yang menyebabkan kerugian, dan tindakan yang perlu diprioritaskan.",
+        value:
+          "Membantu perusahaan mengidentifikasi peluang peningkatan profit, mengurangi kerugian, serta mendukung pengambilan keputusan berbasis data di berbagai industri.",
+        icon: BarChart3,
+        technologies: ["Power BI", "DAX", "Power Query", "Data Analysis"],
+        solutionSteps: [
+          {
+            title: "Memahami tujuan bisnis",
+            description:
+              "Mengidentifikasi KPI dan pertanyaan bisnis yang ingin dijawab.",
+          },
+          {
+            title: "Mengolah data",
+            description:
+              "Membersihkan serta memvalidasi data agar siap dianalisis.",
+          },
+          {
+            title: "Mengubah data menjadi insight",
+            description:
+              "Menganalisis tren penjualan, profit, pelanggan, dan diskon melalui visualisasi interaktif.",
+          },
+          {
+            title: "Mendukung pengambilan keputusan",
+            description:
+              "Menyusun rekomendasi berbasis data yang dapat diterapkan untuk meningkatkan performa bisnis.",
+          },
+        ],
+      },
     ] satisfies Project[],
   },
   en: {
@@ -219,6 +257,43 @@ const projectCopy = {
             title: "Supporting business decisions",
             description:
               "Dashboards and reports help the business owner monitor sales, inventory conditions, and order activity using the same data.",
+          },
+        ],
+      },
+      {
+        number: "03",
+        category:
+          "Data Analysis • Business Intelligence • Sales Analytics • Dashboard Development",
+        title: "Retail Sales Analysis Dashboard",
+        githubUrl: "https://github.com/saleemuchtar",
+        description:
+          "The Retail Sales Analysis Dashboard transforms transaction data into clear business insights, enabling companies to monitor sales performance, profit, customers, and discount strategies to support faster and more accurate decisions.",
+        businessNeed:
+          "Companies need fast, accurate, and easy-to-understand information to identify what generates profit, what causes losses, and which actions should be prioritized.",
+        value:
+          "Helps companies identify opportunities to increase profit, reduce losses, and support data-driven decision-making across various industries.",
+        icon: BarChart3,
+        technologies: ["Power BI", "DAX", "Power Query", "Data Analysis"],
+        solutionSteps: [
+          {
+            title: "Understanding business objectives",
+            description:
+              "Identifying the KPIs and business questions that need to be answered.",
+          },
+          {
+            title: "Processing the data",
+            description:
+              "Cleaning and validating the data so it is ready for analysis.",
+          },
+          {
+            title: "Turning data into insights",
+            description:
+              "Analyzing sales, profit, customer, and discount trends through interactive visualizations.",
+          },
+          {
+            title: "Supporting decision-making",
+            description:
+              "Developing data-based recommendations that can be applied to improve business performance.",
           },
         ],
       },
@@ -343,7 +418,7 @@ export default function ProjectsPage() {
         {/* Project cards */}
         <motion.div
           variants={itemVariants}
-          className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-5 md:grid-cols-2 lg:gap-6"
+          className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6"
         >
           {projects.map((project, index) => {
             const Icon = project.icon
